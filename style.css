@@ -29,7 +29,7 @@
 }
 
 body {
-  background-color: rgb(1, 22, 4);
+  background-color: orange;
 }
 
 canvas {
@@ -38,31 +38,38 @@ canvas {
 
 #controls,
 select {
-  z-index:10;
+  background-color: orangered;
+  z-index: 10;
 }
+
 #controls {
-  position:absolute;
-  right:1rem;
-  width:10vw;
+  position: absolute;
+  right: 1rem;
+  width: 10vw;
+  max-width: fit-content;
+  border-radius: 10px;
 }
-svg {
-  --d:calc(min(5vw,5vh));
-  width: calc(var(--d) * 2);
-  height: calc(var(--d) * 2);
-  fill: #fff;
-  padding: 2rem 0;
-}
+
 select {
+  position:absolute;
+  top:2vh;
+  width: 80vw;
+  max-width: 300px;
   font-size: 1rem;
   padding: .5rem 1rem;
-  border-radius: 3rem;
-  position:fixed;
-  top:1rem;
-  left:1rem;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 900;
 }
-option {
-  font-size: .7rem;
-  color: #222;
+
+svg {
+  --d: calc(min(5vw, 5vh));
+  width: calc(var(--d) * 2);
+  height: calc(var(--d) * 2);
+  max-width: 30px;
+  max-height: 30px;
+  fill: white;
+  padding: 2rem .6rem;
 }
 
 #balldrop {
@@ -71,6 +78,8 @@ option {
 
 #reload {
   left: calc(25vw - .4rem + 2rem);
+  transform-origin: center center;
+  transform: scale(1.3);
 }
 
 #download {
